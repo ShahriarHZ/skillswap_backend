@@ -22,6 +22,7 @@ app.use("/api/ai", aiRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/reviews", reviewRoutes);
 
+app.get("/", (_req, res) => res.json({ message: "SkillSwap API is running" }));
 app.get("/api/health", (_req, res) => res.json({ status: "ok" }));
 
 const PORT = process.env.PORT || 5000;
