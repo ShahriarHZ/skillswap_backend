@@ -9,6 +9,7 @@ import skillRoutes from "./routes/skill.routes";
 import aiRoutes from "./routes/ai.routes";
 import bookingRoutes from "./routes/booking.routes";
 import reviewRoutes from "./routes/review.routes";
+import recommendRoutes from "./routes/recommend.routes";
 
 connectDB();
 
@@ -22,6 +23,7 @@ app.use("/api/skills", skillRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/reviews", reviewRoutes);
+app.use("/api/recommendations", recommendRoutes);
 
 app.get("/", (_req, res) => res.json({ message: "SkillSwap API is running" }));
 app.get("/api/health", (_req, res) => res.json({ status: "ok" }));
